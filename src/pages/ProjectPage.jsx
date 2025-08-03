@@ -1,5 +1,6 @@
 import React from 'react'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
+// eslint-disable-next-line no-unused-vars
 import { useSpring, animated } from 'react-spring';
 import { useInView } from 'react-intersection-observer';
 import styles from './ProjectPage.module.scss'
