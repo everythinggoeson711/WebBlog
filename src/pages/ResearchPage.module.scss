@@ -1,0 +1,319 @@
+@import '../styles/_variables.scss';
+
+.researchPage {
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif;
+  color: $text-primary;
+  background-color: $primary-bg;
+}
+.heroTitle {
+  font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, $highlight-color, $text-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Parallax Container */
+.parallaxContainer {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.backgroundLayer0 {
+  background: $gradient-1;
+}
+.backgroundLayer1 {
+  background: $gradient-2;
+}
+.backgroundLayer2 {
+  background: $gradient-3;
+}
+
+.background-layer3 {
+  background: $gradient-4;
+}
+.background-layer4 {
+  background: $gradient-5;
+}
+.background-layer5 {
+  background: $gradient-6;
+}
+/* Hero Section */
+.heroLayer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5%;
+}
+
+.heroContent {
+  text-align: center;
+  max-width: 900px;
+}
+
+.heroContent h1 {
+  @include section-title;
+  font-size: 3.8rem;
+  margin-bottom: 20px;
+  color: $text-accent;
+}
+.heroContent p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  margin-bottom: 50px;
+  color: $text-secondary;
+}
+
+.researchStats {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.statNumber {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: $highlight-color;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+.statLabel {
+  font-size: 1.1rem;
+  color: $text-secondary;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 5px;
+}
+
+/* Projects Section */
+.projectsLayer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5%;
+}
+
+.projectsContent {
+  text-align: center;
+  max-width: 1200px;
+}
+
+.projectsContent h2 {
+  @include section-title;
+  font-size: 3.2rem;
+  margin-bottom: 60px;
+  color: $text-accent;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.projectCard {
+  @include glassmorphism;
+  padding: 30px;
+  border-radius: 15px;
+  transition: $transition-fast;
+}
+.projectCard:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: $shadow-medium;
+  background: $card-hover-bg;
+}
+
+.projectHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.projectCategory {
+  background: rgba(135, 206, 235, 0.2);
+  color: $highlight-color;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.projectStatus {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.projectStatus.ongoing {
+  background: rgba($status-ongoing, 0.3);
+  color: $status-ongoing;
+}
+.projectStatus.completed {
+  background: rgba($status-completed, 0.3);
+  color: $status-completed;
+}
+.projectStatus.in-progress {
+  background: rgba($status-in-progress, 0.3);
+  color: $status-in-progress;
+}
+.projectStatus.research-phase {
+  background: rgba($status-research-phase, 0.3);
+  color: $status-research-phase;
+}
+
+.projectCard h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: $text-accent;
+  text-align: left;
+}
+.projectCard p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: $text-secondary;
+  text-align: left;
+}
+
+.projectFooter {
+  text-align: right;
+  margin-top: 15px;
+}
+
+.projectYear {
+  font-size: 1rem;
+  color: $highlight-color;
+  font-weight: 500;
+}
+
+/* Publications Section */
+.publicationsLayer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5%;
+}
+
+.publicationsContent {
+  max-width: 1200px;
+}
+
+.publicationsText h2 {
+  @include section-title;
+  font-size: 3.2rem;
+  margin-bottom: 30px;
+  color: $text-accent;
+}
+
+.publicationsText > p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: $text-secondary;
+  margin-bottom: 40px;
+}
+
+.publicationsList {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.publicationItem {
+  background: $card-hover-bg;
+  border: 1px solid $card-border;
+  padding: 20px;
+  border-radius: 12px;
+  backdrop-filter: $backdrop-blur;
+  -webkit-backdrop-filter: $backdrop-blur;
+  transition: $transition-fast;
+}
+.publicationItem:hover {
+  background: $card-hover-bg;
+  transform: translateX(10px);
+}
+
+.publicationItem h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: $highlight-color;
+}
+
+.publicationJournal {
+  font-size: 0.9rem;
+  color: $text-secondary;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.publicationMeta {
+  display: flex;
+  gap: 15px;
+  font-size: 0.9rem;
+  color: $text-secondary;
+}
+
+.publicationsVisual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.researchIllustration {
+  @include glassmorphism;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.illustrationIcon {
+  font-size: 5rem;
+  margin-bottom: 20px;
+}
+
+.researchIllustration h3 {
+  font-size: 1.5rem;
+  color: $text-accent;
+  margin-bottom: 10px;
+}
+.researchIllustration p {
+  font-size: 1rem;
+  color: $text-secondary;
+}
+
+/* Responsive Design */
+@media (max-width: $mobile) {
+  .heroContent h1 {
+    font-size: 2.8rem;
+  }
+  .heroContent p {
+    font-size: 1.1rem;
+  }
+  .researchStats {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .projectsContent h2,
+  .publicationsText h2 {
+    font-size: 2.5rem;
+  }
+  .publicationsList {
+    gap: 15px;
+  }
+  .publicationItem {
+    padding: 15px;
+  }
+  .publicationsVisual {
+    margin-top: 40px;
+  }
+}
