@@ -5,7 +5,7 @@ import { useSpring, animated } from 'react-spring';
 import { useInView } from 'react-intersection-observer';
 import { Row, Col } from 'antd';
 import AnimatedSection from '../components/AnimatedSection';
-import styles from './AboutPage.module.scss';
+import styles from '../assets/scss/AboutPage.module.scss';
 import { FaBook, FaAward, FaFlask, FaUserGraduate, FaLightbulb } from 'react-icons/fa';
 import { SiPytorch, SiTensorflow, SiOpencv, SiPython, SiLatex } from 'react-icons/si';
 
@@ -14,7 +14,6 @@ function AboutPage() {
   const [skillsRef, skillsInView] = useInView({ threshold: 0.1, triggerOnce: true });
   const [experienceRef, experienceInView] = useInView({ threshold: 0.1, triggerOnce: true });
   const [publicationsRef, publicationsInView] = useInView({ threshold: 0.1, triggerOnce: true });
-  const [statsRef, statsInView] = useInView({ threshold: 0.1, triggerOnce: true });
   const [achievementsRef, achievementsInView] = useInView({ threshold: 0.1, triggerOnce: true });
 
   const heroAnimation = useSpring({
@@ -41,11 +40,7 @@ function AboutPage() {
     config: { tension: 180, friction: 25 }
   });
 
-  const statsAnimation = useSpring({
-    opacity: statsInView ? 1 : 0,
-    transform: statsInView ? 'translateY(0px)' : 'translateY(30px)',
-    config: { tension: 180, friction: 25 }
-  });
+
 
   const achievementsAnimation = useSpring({
     opacity: achievementsInView ? 1 : 0,
@@ -53,12 +48,6 @@ function AboutPage() {
     config: { tension: 180, friction: 25 }
   });
 
-  const statsData = [
-    { value: "15+", label: "Peer-Reviewed Papers" },
-    { value: "3", label: "Conference Best Paper Awards" },
-    { value: "1000+", label: "Citations" },
-    { value: "10+", label: "Guided Students" }
-  ];
 
   const publicationsData = [
     { title: "Transformers for Medical Image Segmentation", conference: "International Conference on Computer Vision (ICCV)", year: "2024" },

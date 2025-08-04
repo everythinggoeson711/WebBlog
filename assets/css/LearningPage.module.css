@@ -1,0 +1,922 @@
+.learningPage {
+  min-height: 100vh;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  color: #e0e0e0;
+  background-color: #0c1524;
+}
+
+.heroTitle {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  background: -webkit-gradient(linear, left top, right top, from(#87ceeb), to(#ffffff));
+  background: linear-gradient(90deg, #87ceeb, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.backgroundLayer {
+  background: linear-gradient(135deg, #0c1524 0%, #203a43 100%);
+  position: relative;
+}
+
+.floatingElements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+.floatingElements .circle1, .floatingElements .circle2, .floatingElements .circle3 {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(135, 206, 235, 0.1);
+  -webkit-animation: float 8s ease-in-out infinite;
+          animation: float 8s ease-in-out infinite;
+}
+.floatingElements .circle1 {
+  width: 300px;
+  height: 300px;
+  top: 10%;
+  left: -10%;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+.floatingElements .circle2 {
+  width: 200px;
+  height: 200px;
+  top: 60%;
+  right: -5%;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+.floatingElements .circle3 {
+  width: 150px;
+  height: 150px;
+  top: 30%;
+  right: 20%;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+
+.gradientLayer {
+  background: linear-gradient(45deg, rgba(32, 58, 67, 0.1) 0%, rgba(135, 206, 235, 0.1) 25%, rgba(44, 83, 100, 0.1) 50%, rgba(32, 58, 67, 0.1) 100%);
+  background-size: 400% 400%;
+  -webkit-animation: gradientShift 15s ease infinite;
+          animation: gradientShift 15s ease infinite;
+}
+
+.movingGradient {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(135, 206, 235, 0.15) 0%, transparent 70%);
+  -webkit-animation: pulse 6s ease-in-out infinite;
+          animation: pulse 6s ease-in-out infinite;
+}
+
+.iconsLayer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.techIcons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 100px;
+}
+.techIcons .techIcon {
+  font-size: 3rem;
+  opacity: 0.6;
+  -webkit-animation: bounce 3s ease-in-out infinite;
+          animation: bounce 3s ease-in-out infinite;
+  -webkit-filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+          filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+.techIcons .techIcon:nth-child(1) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+.techIcons .techIcon:nth-child(2) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+.techIcons .techIcon:nth-child(3) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+.techIcons .techIcon:nth-child(4) {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+.particlesLayer {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.particles .particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #87ceeb;
+  border-radius: 50%;
+  opacity: 0.7;
+  -webkit-animation: particleFloat 10s linear infinite;
+          animation: particleFloat 10s linear infinite;
+}
+.particles .particle:nth-child(1) {
+  left: 10%;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
+}
+.particles .particle:nth-child(2) {
+  left: 25%;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-duration: 12s;
+          animation-duration: 12s;
+}
+.particles .particle:nth-child(3) {
+  left: 50%;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+}
+.particles .particle:nth-child(4) {
+  left: 75%;
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
+  -webkit-animation-duration: 14s;
+          animation-duration: 14s;
+}
+.particles .particle:nth-child(5) {
+  left: 90%;
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s;
+  -webkit-animation-duration: 9s;
+          animation-duration: 9s;
+}
+
+.finalLayer {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.finalElements {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.finalElements .glow1, .finalElements .glow2 {
+  position: absolute;
+  border-radius: 50%;
+  -webkit-filter: blur(60px);
+          filter: blur(60px);
+  opacity: 0.3;
+  -webkit-animation: glow 8s ease-in-out infinite;
+          animation: glow 8s ease-in-out infinite;
+}
+.finalElements .glow1 {
+  width: 200px;
+  height: 200px;
+  background: #87ceeb;
+  top: 20%;
+  left: 10%;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+.finalElements .glow2 {
+  width: 150px;
+  height: 150px;
+  background: #203a43;
+  bottom: 30%;
+  right: 15%;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+
+.courseCardWrapper {
+  -webkit-animation: slideInUp 0.8s ease-out forwards;
+          animation: slideInUp 0.8s ease-out forwards;
+  opacity: 0;
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+}
+.courseCardWrapper:nth-child(1) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+.courseCardWrapper:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.courseCardWrapper:nth-child(3) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.courseCardWrapper:nth-child(4) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+.courseCardWrapper:nth-child(5) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+.courseCardWrapper:nth-child(6) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+.courseCardWrapper:nth-child(7) {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+.courseCardWrapper:nth-child(8) {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+@-webkit-keyframes float {
+  0%, 100% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+            transform: translateY(0px) rotate(0deg);
+  }
+  33% {
+    -webkit-transform: translateY(-30px) rotate(5deg);
+            transform: translateY(-30px) rotate(5deg);
+  }
+  66% {
+    -webkit-transform: translateY(-15px) rotate(-5deg);
+            transform: translateY(-15px) rotate(-5deg);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+            transform: translateY(0px) rotate(0deg);
+  }
+  33% {
+    -webkit-transform: translateY(-30px) rotate(5deg);
+            transform: translateY(-30px) rotate(5deg);
+  }
+  66% {
+    -webkit-transform: translateY(-15px) rotate(-5deg);
+            transform: translateY(-15px) rotate(-5deg);
+  }
+}
+@-webkit-keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-webkit-keyframes pulse {
+  0%, 100% {
+    opacity: 0.15;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    opacity: 0.25;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.15;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    opacity: 0.25;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+@-webkit-keyframes bounce {
+  0%, 100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+}
+@keyframes bounce {
+  0%, 100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+}
+@-webkit-keyframes particleFloat {
+  0% {
+    -webkit-transform: translateY(100vh) translateX(0px);
+            transform: translateY(100vh) translateX(0px);
+    opacity: 0;
+  }
+  10%, 90% {
+    opacity: 0.7;
+  }
+  100% {
+    -webkit-transform: translateY(-100px) translateX(50px);
+            transform: translateY(-100px) translateX(50px);
+    opacity: 0;
+  }
+}
+@keyframes particleFloat {
+  0% {
+    -webkit-transform: translateY(100vh) translateX(0px);
+            transform: translateY(100vh) translateX(0px);
+    opacity: 0;
+  }
+  10%, 90% {
+    opacity: 0.7;
+  }
+  100% {
+    -webkit-transform: translateY(-100px) translateX(50px);
+            transform: translateY(-100px) translateX(50px);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes glow {
+  0%, 100% {
+    opacity: 0.2;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+@keyframes glow {
+  0%, 100% {
+    opacity: 0.2;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+@-webkit-keyframes slideInUp {
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes slideInUp {
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+.heroLayer, .contentLayer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pageHeaderSection {
+  text-align: center;
+  max-width: 900px;
+  padding: 0 5%;
+}
+.pageHeaderSection .pageHeader h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  color: #e0e0e0;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+.pageHeaderSection .pageHeader p {
+  font-size: 1.2rem;
+  color: #c0c0c0;
+  max-width: 600px;
+  margin: 0 auto;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.contentContainer {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 5%;
+}
+
+.coursesSection {
+  text-align: center;
+}
+.coursesSection .coursesListContainer h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  color: #e0e0e0;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.coursesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.courseCard {
+  background: rgba(44, 83, 100, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(135, 206, 235, 0.3);
+  border-radius: 20px;
+  -webkit-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 20px;
+  background-color: rgba(12, 21, 36, 0.8);
+  border: 1px solid rgba(135, 206, 235, 0.1);
+}
+.courseCard:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  background: rgba(32, 58, 67, 0.6);
+}
+.courseCard .courseImage {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.courseCard:hover .courseImage {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+.courseCard .courseInfo {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.courseCard .courseInfo .courseHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-bottom: 10px;
+}
+.courseCard .courseInfo .courseCategory {
+  background: rgba(135, 206, 235, 0.2);
+  color: #87ceeb;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+.courseCard .courseInfo h3 {
+  font-size: 1.6rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.courseCard .courseInfo .courseDescription {
+  font-size: 0.95rem;
+  color: #c0c0c0;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+.courseCard .courseInfo .courseMeta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
+}
+.courseCard .courseInfo .courseMeta .metaItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+}
+.courseCard .courseInfo .courseMeta .metaItem span {
+  color: #c0c0c0;
+  font-size: 0.9rem;
+}
+.courseCard .courseInfo .courseMeta .metaItem .icon {
+  font-size: 1.2rem;
+  color: #87ceeb;
+}
+.courseCard .courseInfo .courseFooter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.courseCard .courseInfo .courseFooter .coursePrice {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #87ceeb;
+}
+.courseCard .courseInfo .courseFooter .enrollBtn {
+  display: inline-block;
+  padding: 10px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #203a43 0%, #2c5364 100%);
+  border: none;
+  border-radius: 30px;
+  -webkit-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  -webkit-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  text-decoration: none;
+  outline: none;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  padding: 12px 24px;
+  border-radius: 25px;
+  background: #87ceeb;
+  color: #0c1524;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.courseCard .courseInfo .courseFooter .enrollBtn:hover, .courseCard .courseInfo .courseFooter .enrollBtn:focus {
+  background: linear-gradient(135deg, #2c5364 0%, #0c1524 100%);
+  color: #87ceeb;
+  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  -webkit-transform: translateY(-2px) scale(1.03);
+          transform: translateY(-2px) scale(1.03);
+}
+.courseCard .courseInfo .courseFooter .enrollBtn:active {
+  background: linear-gradient(135deg, #0c1524 0%, #203a43 100%);
+  color: #ffffff;
+  -webkit-box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+}
+.courseCard .courseInfo .courseFooter .enrollBtn.secondary {
+  background: linear-gradient(135deg, #203a43 0%, #2c5364 100%);
+  color: #e0e0e0;
+}
+.courseCard .courseInfo .courseFooter .enrollBtn.secondary:hover, .courseCard .courseInfo .courseFooter .enrollBtn.secondary:focus {
+  background: linear-gradient(135deg, #0c1524 0%, #203a43 100%);
+  color: #87ceeb;
+}
+.courseCard .courseInfo .courseFooter .enrollBtn.outline {
+  background: transparent;
+  color: #87ceeb;
+  border: 2px solid #87ceeb;
+}
+.courseCard .courseInfo .courseFooter .enrollBtn.outline:hover, .courseCard .courseInfo .courseFooter .enrollBtn.outline:focus {
+  background: linear-gradient(135deg, #203a43 0%, #2c5364 100%);
+  color: #ffffff;
+  border-color: #ffffff;
+}
+.courseCard .courseInfo .courseFooter .enrollBtn:hover {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  background: rgb(91.2857142857, 188.15, 227.7142857143);
+}
+
+.learningStatsContainer {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 5%;
+  text-align: center;
+}
+
+.statsBox {
+  background: rgba(44, 83, 100, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(135, 206, 235, 0.3);
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 900px;
+  border-radius: 20px;
+  margin: 0 auto;
+}
+
+.statsHeader {
+  margin-bottom: 30px;
+}
+.statsHeader h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  color: #e0e0e0;
+  font-size: 2.5rem;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+.statsGrid .statItem h3 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #87ceeb;
+  margin-bottom: 5px;
+}
+.statsGrid .statItem p {
+  color: #c0c0c0;
+  font-size: 1rem;
+}
+
+.ctaContainer {
+  width: 100%;
+  max-width: 1000px;
+  padding: 0 5%;
+  text-align: center;
+}
+
+.ctaBox {
+  background: rgba(44, 83, 100, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(135, 206, 235, 0.3);
+  border-radius: 20px;
+  padding: 50px 40px;
+  border-radius: 20px;
+}
+.ctaBox h2 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+.ctaBox p {
+  font-size: 1.1rem;
+  color: #c0c0c0;
+  margin-bottom: 30px;
+}
+.ctaBox .ctaBtn {
+  display: inline-block;
+  padding: 10px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #203a43 0%, #2c5364 100%);
+  border: none;
+  border-radius: 30px;
+  -webkit-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  -webkit-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  text-decoration: none;
+  outline: none;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  background: -webkit-gradient(linear, left top, right top, from(#87ceeb), to(rgb(69.4285714286, 179.225, 224.0714285714)));
+  background: linear-gradient(90deg, #87ceeb, rgb(69.4285714286, 179.225, 224.0714285714));
+  color: #0c1524;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.ctaBox .ctaBtn:hover, .ctaBox .ctaBtn:focus {
+  background: linear-gradient(135deg, #2c5364 0%, #0c1524 100%);
+  color: #87ceeb;
+  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  -webkit-transform: translateY(-2px) scale(1.03);
+          transform: translateY(-2px) scale(1.03);
+}
+.ctaBox .ctaBtn:active {
+  background: linear-gradient(135deg, #0c1524 0%, #203a43 100%);
+  color: #ffffff;
+  -webkit-box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+}
+.ctaBox .ctaBtn.secondary {
+  background: linear-gradient(135deg, #203a43 0%, #2c5364 100%);
+  color: #e0e0e0;
+}
+.ctaBox .ctaBtn.secondary:hover, .ctaBox .ctaBtn.secondary:focus {
+  background: linear-gradient(135deg, #0c1524 0%, #203a43 100%);
+  color: #87ceeb;
+}
+.ctaBox .ctaBtn.outline {
+  background: transparent;
+  color: #87ceeb;
+  border: 2px solid #87ceeb;
+}
+.ctaBox .ctaBtn.outline:hover, .ctaBox .ctaBtn.outline:focus {
+  background: linear-gradient(135deg, #203a43 0%, #2c5364 100%);
+  color: #ffffff;
+  border-color: #ffffff;
+}
+.ctaBox .ctaBtn:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  -webkit-box-shadow: 0 8px 15px rgba(135, 206, 235, 0.3);
+          box-shadow: 0 8px 15px rgba(135, 206, 235, 0.3);
+}
+
+@media (max-width: 992px) {
+  .pageHeaderSection .pageHeader h1 {
+    font-size: 3rem;
+  }
+  .pageHeaderSection .pageHeader p {
+    font-size: 1rem;
+  }
+  .coursesSection h2 {
+    font-size: 2rem;
+  }
+  .statsBox {
+    padding: 30px;
+  }
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  .statsGrid .statItem h3 {
+    font-size: 2rem;
+  }
+  .techIcons {
+    gap: 50px;
+  }
+  .techIcons .techIcon {
+    font-size: 2.5rem;
+  }
+  .floatingElements .circle1 {
+    width: 200px;
+    height: 200px;
+  }
+  .floatingElements .circle2 {
+    width: 150px;
+    height: 150px;
+  }
+  .floatingElements .circle3 {
+    width: 100px;
+    height: 100px;
+  }
+  .ctaBox {
+    padding: 40px 30px;
+  }
+  .ctaBox h2 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .pageHeaderSection .pageHeader h1 {
+    font-size: 2.5rem;
+  }
+  .coursesSection h2 {
+    font-size: 1.8rem;
+  }
+  .coursesGrid {
+    grid-template-columns: 1fr;
+  }
+  .statsBox {
+    padding: 20px;
+  }
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+  .statsGrid .statItem h3 {
+    font-size: 1.8rem;
+  }
+  .courseCard .courseInfo h3 {
+    font-size: 1.4rem;
+  }
+  .techIcons {
+    gap: 30px;
+  }
+  .techIcons .techIcon {
+    font-size: 2rem;
+  }
+  .floatingElements .circle1 {
+    width: 150px;
+    height: 150px;
+  }
+  .floatingElements .circle2 {
+    width: 100px;
+    height: 100px;
+  }
+  .floatingElements .circle3 {
+    width: 80px;
+    height: 80px;
+  }
+  .particles .particle {
+    width: 3px;
+    height: 3px;
+  }
+  .ctaBox {
+    padding: 30px 20px;
+  }
+  .ctaBox h2 {
+    font-size: 1.8rem;
+  }
+  .ctaBox p {
+    font-size: 0.9rem;
+  }
+  .ctaBox .ctaBtn {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+}/*# sourceMappingURL=LearningPage.module.css.map */

@@ -5,7 +5,7 @@ import { useSpring, animated } from 'react-spring';
 import { useInView } from 'react-intersection-observer';
 import { Row, Col } from 'antd';
 import AnimatedSection from '../components/AnimatedSection';
-import styles from './ResearchPage.module.scss';
+import styles from '../assets/scss/ResearchPage.module.scss';
 
 function ResearchPage() {
   const [heroRef, heroInView] = useInView({ threshold: 0.1, triggerOnce: true });

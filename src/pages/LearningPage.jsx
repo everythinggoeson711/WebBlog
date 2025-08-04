@@ -3,7 +3,7 @@ import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 // eslint-disable-next-line no-unused-vars
 import { useSpring, animated } from 'react-spring';
 import { useInView } from 'react-intersection-observer';
-import styles from './LearningPage.module.scss';
+import styles from '../assets/scss/LearningPage.module.scss';
 import { FaGraduationCap, FaChalkboardTeacher, FaStar, FaClock } from 'react-icons/fa';
 import { SiPytorch, SiTensorflow, SiOpencv, SiPython } from 'react-icons/si';
 

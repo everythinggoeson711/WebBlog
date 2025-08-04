@@ -3,7 +3,7 @@ import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 // eslint-disable-next-line no-unused-vars
 import { useSpring, animated } from 'react-spring';
 import { useInView } from 'react-intersection-observer';
-import styles from './ProjectPage.module.scss'
+import styles from '../assets/scss/ProjectPage.module.scss';
 
 const ProjectPage = () => {
   const [heroRef, heroInView] = useInView({ threshold: 0.1, triggerOnce: true });

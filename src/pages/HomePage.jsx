@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 // eslint-disable-next-line no-unused-vars
 import { useSpring, animated } from 'react-spring';
-import styles from './HomePage.module.scss';
+import styles from '../assets/scss/HomePage.module.scss';
 import { Book, FlaskConical, Award, Users, Mail, ArrowRight, Github, Linkedin, Twitter } from 'lucide-react';
 
 const HomePage = () => {
